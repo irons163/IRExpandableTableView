@@ -58,34 +58,6 @@
                 Log *log = [session.logs objectAtIndex:indexPath.section];
                 cell.nameLabel.text = log.title;
                 cell.subTitleLabel.text = log.reason;
-//                cell.subTitleLabel.hidden = log.reason.length == 0;
-                
-//                cell.subTitleLabel.hidden = YES;
-                
-//                NSString *regex = @"\\(.*\\)";
-//                NSRegularExpression *re = [NSRegularExpression regularExpressionWithPattern:regex
-//                                                                                    options:0
-//                                                                                      error:nil];
-//                NSTextCheckingResult *match = [re firstMatchInString:log.title
-//                                                             options:0
-//                                                               range:NSMakeRange(0, log.title.length)];
-//                if (match) {
-//                    NSString *titlle = [log.title stringByReplacingCharactersInRange:match.range withString:@""];
-//                    NSString *subtitle = [log.title substringWithRange:match.range];
-//                    subtitle = [subtitle stringByReplacingOccurrencesOfString:@"(" withString:@""];
-//                    subtitle = [subtitle stringByReplacingOccurrencesOfString:@")" withString:@""];
-//
-//                    cell.nameLabel.text = titlle;
-//                    cell.subTitleLabel.text = subtitle;
-//                    cell.subTitleLabel.hidden = NO;
-//                } else {
-//                    cell.nameLabel.text = log.title;
-//                    cell.subTitleLabel.text = nil;
-//                    cell.subTitleLabel.hidden = YES;
-//                }
-                
-//                cell.nameLabel.text = session.reason;
-                
                 cell.timeLabel.text = log.displayTime;
                 cell.rssiLabel.text = [NSString stringWithFormat:@"RSSI%ld", log.rssi];
                 

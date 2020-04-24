@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIView *bandView;
 @property (weak, nonatomic) IBOutlet UIView *apToView;
 @property (weak, nonatomic) IBOutlet UIView *informationView;
-@property (weak, nonatomic) IBOutlet UIImageView *signalImageView;
 @property (weak, nonatomic) IBOutlet UILabel *rssiLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLineImageViewConstraintWidth;
 
@@ -50,26 +49,6 @@
 - (void)setRssi:(NSInteger)rssi {
     _rssi = rssi;
     _rssiLabel.text = [NSString stringWithFormat:@"%ld dBm", _rssi];
-    _signalImageView.image = [self signalImage];
-}
-
-- (UIImage *)signalImage {
-    if (self.rssi > -60) {
-        return [UIImage imageNamed:@"ic_signal_5"];
-    }
-    if (self.rssi > -66) {
-        return [UIImage imageNamed:@"ic_signal_4"];
-    }
-    if (self.rssi > -69) {
-        return [UIImage imageNamed:@"ic_signal_3"];
-    }
-    if (self.rssi > -79) {
-        return [UIImage imageNamed:@"ic_signal_2"];
-    }
-    if (self.rssi > -89) {
-        return [UIImage imageNamed:@"ic_signal_1"];
-    }
-    return [UIImage imageNamed:@"ic_signal_0"];
 }
 
 - (IBAction)didClickHeaderView:(id)sender {

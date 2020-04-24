@@ -109,25 +109,12 @@
                     preApTo = [preItem.session.apTo isEqualToString:item.session.apTo];
                 }
                 
-                NSString *_name = item.session.name;
-                NSString *_reason = item.session.reason;
                 UIImage *_iconImage = nil;
                 
                 if (preIsLeave) {
-                    if ([_name isEqualToString:@"deny"]) {
-                        _iconImage = [_reason containsString:@"Incorrect password"] ? [UIImage imageNamed:@"ic_fail"] : [UIImage imageNamed:@"ic_block"];
-                    } else if ([_name isEqualToString:@"associate"]
-                               || [_name isEqualToString:@"connect_eap"]
-                               || [_name isEqualToString:@"connect_open"]
-                               || [_name isEqualToString:@"connect_wpa"]
-                               || [_name isEqualToString:@"steer"]
-                               || [_name isEqualToString:@"roam"]) {
-                        _iconImage = [UIImage imageNamed:@"ic_connect"];
-                    } else {
-                        _iconImage = nil;
-                    }
+                    _iconImage = [UIImage imageNamed:@"ban"];
                 } else {
-                    _iconImage = preApTo ? [UIImage imageNamed:@"ic_same ap"] : [UIImage imageNamed:@"ic_change ap"];
+                    _iconImage = [UIImage imageNamed:@"ban"];
                 }
                 
                 item.session.iconImage = _iconImage;

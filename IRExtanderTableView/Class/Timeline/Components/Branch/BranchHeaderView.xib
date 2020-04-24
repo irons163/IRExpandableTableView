@@ -26,7 +26,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_signup_arrow down_n" highlightedImage="ic_up_white" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-QG-nLZ">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HierarchyImage2_top.png" highlightedImage="HierarchyImage_top.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-QG-nLZ">
                                     <rect key="frame" x="105" y="7.5" width="19.5" height="12"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="12" id="3XX-Qh-cm6"/>
@@ -103,7 +103,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_signup_arrow down_n" width="60" height="60"/>
-        <image name="ic_up_white" width="48" height="48"/>
+        <image name="HierarchyImage2_top.png" width="50" height="50"/>
+        <image name="HierarchyImage_top.png" width="50" height="50"/>
     </resources>
 </document>

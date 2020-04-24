@@ -14,12 +14,9 @@
 - (instancetype)initWithLogData:(NSDictionary *)dataDictionary {
     if (self = [super init]) {
         dataDictionary = [dataDictionary dictionaryRemovingNSNullValues];
-        _aid = dataDictionary[@"aid"];
         _dateSecond = [dataDictionary[@"date"] integerValue] / 1000;
-        _event = dataDictionary[@"event"];
         _reason = dataDictionary[@"reason"];
         _rssi = [dataDictionary[@"rssi"] integerValue];
-        _ratio5G = dataDictionary[@"ratio5G"];
         _title = dataDictionary[@"title"];
     }
     return self;

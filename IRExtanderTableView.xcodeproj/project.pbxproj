@@ -50,6 +50,8 @@
 		B5A7D874244FE1B100BCD1F1 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A7D873244FE1B100BCD1F1 /* UIColor+Helper.m */; };
 		B5A7D87C244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A7D879244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.xib */; };
 		B5A7D87D244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A7D87A244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.m */; };
+		B5B2041524528C3200C56F83 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B2041424528C3200C56F83 /* CircleView.m */; };
+		B5B2041824528C5D00C56F83 /* RoundCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B2041624528C5C00C56F83 /* RoundCornerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,10 @@
 		B5A7D879244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorClientsDetailTimelineTableViewCell.xib; sourceTree = "<group>"; };
 		B5A7D87A244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorClientsDetailTimelineTableViewCell.m; sourceTree = "<group>"; };
 		B5A7D87B244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorClientsDetailTimelineTableViewCell.h; sourceTree = "<group>"; };
+		B5B2041324528C3200C56F83 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		B5B2041424528C3200C56F83 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		B5B2041624528C5C00C56F83 /* RoundCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundCornerView.m; sourceTree = "<group>"; };
+		B5B2041724528C5D00C56F83 /* RoundCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +330,10 @@
 				B5A7D871244FE1B100BCD1F1 /* ColorDefine.h */,
 				B5A7D872244FE1B100BCD1F1 /* UIColor+Helper.h */,
 				B5A7D873244FE1B100BCD1F1 /* UIColor+Helper.m */,
+				B5B2041324528C3200C56F83 /* CircleView.h */,
+				B5B2041424528C3200C56F83 /* CircleView.m */,
+				B5B2041724528C5D00C56F83 /* RoundCornerView.h */,
+				B5B2041624528C5C00C56F83 /* RoundCornerView.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -427,6 +437,7 @@
 				B5A7D7FB244FE00600BCD1F1 /* ViewController.m in Sources */,
 				B5A7D857244FE0C000BCD1F1 /* BranchTableIView.m in Sources */,
 				B5A7D7F5244FE00600BCD1F1 /* AppDelegate.m in Sources */,
+				B5B2041824528C5D00C56F83 /* RoundCornerView.m in Sources */,
 				B5A7D856244FE0C000BCD1F1 /* LeafTableViewCell.m in Sources */,
 				B5A7D806244FE00900BCD1F1 /* main.m in Sources */,
 				B5A7D861244FE0C000BCD1F1 /* BranchFooterView.m in Sources */,
@@ -444,6 +455,7 @@
 				B5A7D84F244FE0C000BCD1F1 /* MessageModel.m in Sources */,
 				B5A7D869244FE0C000BCD1F1 /* Session.m in Sources */,
 				B5A7D86A244FE0C000BCD1F1 /* ClientJourney.m in Sources */,
+				B5B2041524528C3200C56F83 /* CircleView.m in Sources */,
 				B5A7D87D244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.m in Sources */,
 				B5A7D85B244FE0C000BCD1F1 /* MessageBranch.m in Sources */,
 				B5A7D85C244FE0C000BCD1F1 /* MessageBranchTableViewCell.m in Sources */,

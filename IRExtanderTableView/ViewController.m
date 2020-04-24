@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+//    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [_tableView registerNib:[UINib nibWithNibName:MonitorClientsDetailTimelineTableViewCell.identifier bundle:nil] forCellReuseIdentifier:MonitorClientsDetailTimelineTableViewCell.identifier];
 }

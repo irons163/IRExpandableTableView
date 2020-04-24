@@ -71,27 +71,7 @@
     
     BOOL isOpened = ![model hiddenRowsinSection:section];
     
-    NSString *name = self.session.name;
-    NSString *apTo = self.session.apTo;
-    NSString *title = nil;
-    
-    if ([name isEqualToString:@"associate"]) {
-        title = [NSString stringWithFormat:@"Associated to %@ without authentication", apTo];
-    } else if ([name isEqualToString:@"deny"]) {
-        title = [NSString stringWithFormat:@"Refused by %@", apTo];
-    } else if ([name isEqualToString:@"connect_eap"]) {
-        title = [NSString stringWithFormat:@"Connected to %@ with EAP security", apTo];
-    } else if ([name isEqualToString:@"connect_open"]) {
-        title = [NSString stringWithFormat:@"Connected to %@ with security", apTo];
-    } else if ([name isEqualToString:@"connect_wpa"]) {
-        title = [NSString stringWithFormat:@"Connected to %@ with WPA security", apTo];
-    } else if ([name isEqualToString:@"roam"]) {
-        title = [NSString stringWithFormat:@"Roamed from previous AP to %@", apTo];
-    } else if ([name isEqualToString:@"steer"]) {
-        title = [NSString stringWithFormat:@"Band steered to %@", apTo];
-    } else {
-        title = @"";
-    }
+    NSString *title = self.session.name;
     
     sectionHeaderView.titleLabel.text = title;
     sectionHeaderView.bandTagLabel.text = self.session.radio;
@@ -100,7 +80,6 @@
     sectionHeaderView.apToLabel.text = self.session.apTo;
     sectionHeaderView.ssidLabel.text = self.session.ssid;
     sectionHeaderView.channelLabel.text = [NSString stringWithFormat:@"CH %@",self.session.channel];
-    sectionHeaderView.typeLabel.text = [self.session.protocol substringFromIndex:6];
     sectionHeaderView.rssi = self.session.rssi;
     sectionHeaderView.logsTitleLabel.text = [NSString stringWithFormat:@"%@ (%ld %@)", self.session.duration, self.session.logs.count, self.session.logs.count > 1 ? @"Events" : @"Event"];
 //    sectionHeaderView.leftIcon.image = [model getSectionLeftIconinSection:section];

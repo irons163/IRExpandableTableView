@@ -14,11 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Session : NSObject
 
-@property (nonatomic, strong, readonly) NSString* hvID;
 @property (nonatomic, strong, readonly) NSString* name;
-@property (nonatomic, strong, readonly) NSString* networkID;
-@property (nonatomic, strong, readonly) NSString* deviceID;
-@property (nonatomic, strong, readonly) NSString* mac;
 @property (nonatomic, readonly) NSInteger dateSecond;
 @property (nonatomic, strong, readonly) NSDate* date;
 @property (nonatomic, strong, readonly) NSString* displayDate;
@@ -30,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString* radio;
 @property (nonatomic, strong, readonly) NSString* channel;
 @property (nonatomic, readonly) NSInteger rssi;
-@property (nonatomic, strong, readonly) NSString* protocol;
 @property (nonatomic, strong, readonly) NSString* duration;
 @property (nonatomic, strong, readonly) NSString* reason;
 @property (nonatomic, strong, readonly) NSString* leave;

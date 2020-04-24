@@ -210,7 +210,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    return UITableViewAutomaticDimension;
     return 0;
 }
 
@@ -221,7 +220,6 @@
     
     BranchHeaderView* sectionHeaderView = (BranchHeaderView*)[tableView dequeueReusableHeaderFooterViewWithIdentifier:@"BranchHeaderView"];
     sectionHeaderView.delegate = self;
-//    sectionHeaderView.arrowImageView.hidden = YES;
     
     Branch *branch = [self->children objectAtIndex:section];
     UIColor *backgroundColor = nil;
@@ -237,8 +235,6 @@
     sectionHeaderView.titleLabel.text = [model getSectionTitleinSection:section];
     sectionHeaderView.titleLabel.textColor = [model hiddenRowsinSection:section] ? [UIColor colorWithColorCodeString:closedTextColor] : [UIColor colorWithColorCodeString:openedTextColor];
     sectionHeaderView.lineImageView.hidden = !branch.isOpened && (section == [model numberOfSectionsInTableView:tableView] - 1);
-//    sectionHeaderView.subTitleLabel.text = @"";
-//    sectionHeaderView.leftIcon.image = [model getSectionLeftIconinSection:section];
     sectionHeaderView.tag = section;
     sectionHeaderView.arrowImageView.highlighted = ![model hiddenRowsinSection:section];
     
@@ -253,11 +249,6 @@
     }
         
     BranchFooterView* sectionFooterView = (BranchFooterView*)[tableView dequeueReusableHeaderFooterViewWithIdentifier:[BranchFooterView identifier]];
-    
-//    NSInteger endTime = self.session.dateSecond + (NSInteger)self.session.duration;
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"HH:mm:ss"];
-//    NSString *endTimeString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:endTime]];
     
     id<FunctionModelItem> item = [model getIteminSection:section];
     Session *session = ((FunctionModelBranchItem *)item).session;
@@ -292,7 +283,6 @@
 
 - (void)updateTableViewUIWithSections:(NSArray<NSNumber *> *)sections {
     dispatch_async(dispatch_get_main_queue(), ^{
-//    [UIView animateWithDuration:0 animations:^{
     [UIView setAnimationsEnabled:NO];
         [self.tableView performBatchUpdates:^{
             NSMutableIndexSet *sectionsSet = [NSMutableIndexSet indexSet];
@@ -302,7 +292,6 @@
                 NSInteger section = [sectionNumber integerValue];
                 [sectionsSet addIndex:section];
                 
-//                [self->model hideRows:![self->model hiddenRowsinSection:section] inSection:section];
                 Branch *branch = [self->children objectAtIndex:section];
                 [self->model hideRows:!branch.isOpened inSection:section];
                 
@@ -320,20 +309,14 @@
             }
             
             [self.tableView reloadSections:sectionsSet withRowAnimation:UITableViewRowAnimationNone];
-            
-//            [self.tableView layoutIfNeeded];
         } completion:^(BOOL finished) {
-//            [self.tableView layoutIfNeeded];
-            
             if(self.superNode){
                 [self.superNode loopUpdate:self];
             } else {
-//                [self loopUpdate:self];
                 [self.delegate didUpdate:nil];
             }
         }];
     [UIView setAnimationsEnabled:YES];
-//    }];
     });
 }
 
@@ -360,16 +343,8 @@
                 [self.delegate didUpdate:nil];
             }
         }];
-//    [self.tableView beginUpdates];
-//    [self.tableView endUpdates];
-//
-//    [self.delegate didUpdate];
     });
     [UIView setAnimationsEnabled:YES];
-    
-//    if(self.superNode){
-//        [self.superNode loopUpdate:self];
-//    }
 }
 
 
@@ -381,12 +356,6 @@
     if (superNode) {
         [((Branch*)superNode)->model hideRows:!_isOpened inSection:[((Branch*)superNode)->children indexOfObject:self]];
     }
-////    NSInteger count = [self->model numberOfSectionsInTableView:self.tableView];
-//    NSInteger count = [self->model getCountOfItems];
-////    NSMutableArray *sections = [NSMutableArray array];
-//    for (int i = 0; i < count; i++) {
-//        [self->model hideRows:!_isOpened inSection:i];
-//    }
 }
 
 - (void)hideSectionWithChild:(id<Corp>)child hide:(BOOL)hide {

@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="1" sectionFooterHeight="1" estimatedSectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwU-Xj-KYB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ssw-qA-XFA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3Kg-2d-HAh"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NoN-Ws-zbx"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ls4-PL-qeU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j7m-Oc-C93"/>
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-wQ-VO4">
@@ -30,11 +30,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Ssw-qA-XFA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3PT-lV-6ci"/>
                             <constraint firstItem="Hia-wQ-VO4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="A43-oH-6P5"/>
-                            <constraint firstAttribute="bottom" secondItem="pwU-Xj-KYB" secondAttribute="bottom" id="QmG-gy-xw1"/>
-                            <constraint firstItem="pwU-Xj-KYB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VPp-DY-ttA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwU-Xj-KYB" secondAttribute="trailing" id="Yev-r6-Bow"/>
-                            <constraint firstItem="pwU-Xj-KYB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZiX-4n-pAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ssw-qA-XFA" secondAttribute="bottom" id="Pj3-6D-UJ0"/>
+                            <constraint firstItem="Ssw-qA-XFA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YjT-m3-cUc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ssw-qA-XFA" secondAttribute="trailing" id="hpM-n0-aMt"/>
                             <constraint firstItem="Hia-wQ-VO4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o6I-ov-6f3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,7 +42,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="loadingView" destination="Hia-wQ-VO4" id="5sO-QI-DrD"/>
-                        <outlet property="tableView" destination="pwU-Xj-KYB" id="NCR-yX-XXU"/>
+                        <outlet property="tableView" destination="Ssw-qA-XFA" id="XRh-lQ-dxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

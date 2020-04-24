@@ -20,6 +20,6 @@
 @property (nonatomic,readonly) NSInteger total;
 @property (nonatomic,strong,readonly) NSArray *sessions;
 
-- (instancetype)initWithClientJourneyData:(NSDictionary *)dataDictionary HvID:(nonnull NSString *)hvID;
+- (instancetype)initWithClientJourneyData:(NSDictionary *)dataDictionary;
 
 @end

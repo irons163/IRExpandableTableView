@@ -12,7 +12,7 @@
 
 @implementation ClientJourney
 
-- (instancetype)initWithClientJourneyData:(NSDictionary *)dataDictionary HvID:(nonnull NSString *)hvID {
+- (instancetype)initWithClientJourneyData:(NSDictionary *)dataDictionary {
     self = [super init];
     if (self) {
         dataDictionary = [dataDictionary dictionaryRemovingNSNullValues];

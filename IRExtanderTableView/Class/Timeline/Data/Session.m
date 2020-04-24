@@ -16,11 +16,7 @@
 - (instancetype)initWithClientJourneyData:(NSDictionary *)dataDictionary {
     if (self = [super init]) {
         dataDictionary = [dataDictionary dictionaryRemovingNSNullValues];
-        _hvID = dataDictionary[@"hv_id"];
         _name = dataDictionary[@"name"];
-        _networkID = dataDictionary[@"network_id"];
-        _deviceID = dataDictionary[@"device_id"];
-        _mac = dataDictionary[@"mac"];
         _dateSecond = [dataDictionary[@"date"] integerValue] / 1000;
         _disDateSecond = [dataDictionary[@"dis_date"] integerValue] / 1000;
         _apTo = dataDictionary[@"ap_to"];
@@ -28,7 +24,6 @@
         _radio = dataDictionary[@"radio"];
         _channel = dataDictionary[@"channel"];
         _rssi = [dataDictionary[@"rssi"] integerValue];
-        _protocol = dataDictionary[@"protocol"];
         _duration = dataDictionary[@"duration"];
         _reason = dataDictionary[@"reason"];
         _leave = dataDictionary[@"leave"];
