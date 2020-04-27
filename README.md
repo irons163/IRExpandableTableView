@@ -3,7 +3,7 @@
 
 # IRExtanderTableView 
 
-- IRExtanderTableView is a powerful resizable view for iOS.
+- IRExtanderTableView is a powerful extanderable tableview for iOS.
 
 ## Features
 - Extander tableview with nested.
