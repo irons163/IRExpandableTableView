@@ -55,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B56AAC3E2452E9B700D73F92 /* ButtonClickCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonClickCallback.h; sourceTree = "<group>"; };
 		B5A7D7F0244FE00500BCD1F1 /* IRExtanderTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRExtanderTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5A7D7F3244FE00600BCD1F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5A7D7F4244FE00600BCD1F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		B5A7D871244FE1B100BCD1F1 /* ColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDefine.h; sourceTree = "<group>"; };
 		B5A7D872244FE1B100BCD1F1 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		B5A7D873244FE1B100BCD1F1 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
-		B5A7D876244FE1D300BCD1F1 /* ButtonClickCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonClickCallback.h; sourceTree = "<group>"; };
 		B5A7D879244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonitorClientsDetailTimelineTableViewCell.xib; sourceTree = "<group>"; };
 		B5A7D87A244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorClientsDetailTimelineTableViewCell.m; sourceTree = "<group>"; };
 		B5A7D87B244FE61500BCD1F1 /* MonitorClientsDetailTimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorClientsDetailTimelineTableViewCell.h; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 		B5A7D86D244FE18200BCD1F1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B5A7D875244FE1D300BCD1F1 /* BasicCallback */,
+				B56AAC3E2452E9B700D73F92 /* ButtonClickCallback.h */,
 				B5A7D86E244FE1A000BCD1F1 /* NSDictionary+DictCategory.h */,
 				B5A7D86F244FE1A000BCD1F1 /* NSDictionary+DictCategory.m */,
 				B5A7D871244FE1B100BCD1F1 /* ColorDefine.h */,
@@ -336,15 +336,6 @@
 				B5B2041624528C5C00C56F83 /* RoundCornerView.m */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		B5A7D875244FE1D300BCD1F1 /* BasicCallback */ = {
-			isa = PBXGroup;
-			children = (
-				B5A7D876244FE1D300BCD1F1 /* ButtonClickCallback.h */,
-			);
-			name = BasicCallback;
-			path = ../../../../Downloads/EnGeniusCloud_iOS/EnGeniusCloud/EnGeniusCloud/Class/Utility/BasicCallback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
