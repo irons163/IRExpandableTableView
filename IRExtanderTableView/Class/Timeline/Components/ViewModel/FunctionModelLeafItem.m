@@ -14,7 +14,7 @@
 }
 @synthesize hideCells;
 
--(instancetype)initWithRowCount:(NSUInteger)rowCount {
+- (instancetype)initWithRowCount:(NSUInteger)rowCount {
     if(self = [self init]){
         _rowCount = 1;
     }

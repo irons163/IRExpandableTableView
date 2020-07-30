@@ -35,10 +35,6 @@
     return nil;
 }
 
-//- (void)click {
-//    NSLog(@"Leaf be clicked.");
-//}
-
 - (void)click {
     self.isOpened = !self.isOpened;
 }
@@ -48,6 +44,10 @@
 }
 
 - (void)loopUpdate:(id<Corp>)calledChild {
+    
+}
+
+- (void)loopWillUpdate {
     
 }
 

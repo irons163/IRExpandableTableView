@@ -19,7 +19,7 @@
 
 @end
 
-@interface Branch : NSObject<Corp, BranchDelegate>{
+@interface Branch : NSObject<Corp>{
     NSMutableArray *children;
     Model *model;
 }
@@ -34,5 +34,11 @@
 
 - (instancetype)initWithTableView:(UITableView*)tableView;
 - (void)hideSectionWithChild:(id<Corp>)child hide:(BOOL)hide;
+
+@end
+
+@interface Branch(Protect)<HierarchyViewModelDelegate>
+
+- (void)performBranchClickAtSections:(NSArray<NSNumber *> *)sections;
 
 @end

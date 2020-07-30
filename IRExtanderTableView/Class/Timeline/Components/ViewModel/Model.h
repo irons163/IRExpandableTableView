@@ -19,7 +19,7 @@
 
 @end
 
-@interface Model : NSObject <UITableViewDataSource, HierarchyViewModelDelegate>{
+@interface Model : NSObject <UITableViewDataSource>{
 @protected
     NSMutableArray<FunctionModelItem>* items;
     NSArray* infoTitleItems;
@@ -28,7 +28,6 @@
 }
 
 @property (weak) id<HierarchyViewModelDelegate> delegate;
-//@property (weak) UITableView* tableView;
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;

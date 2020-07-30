@@ -11,12 +11,11 @@
 #import "MessageBranchFooterView.h"
 #import "MessageModel.h"
 #import "BranchFooterView.h"
+#import "IRScope.h"
 
 @interface MessageBranch()<UITableViewDelegate>
 
 @property NSMutableArray<NSNumber *> *openInformations;
-
-- (void)performBranchClickAtSections:(NSArray<NSNumber *> *)sections;
 
 @end
 
@@ -82,7 +81,6 @@
     sectionHeaderView.channelLabel.text = [NSString stringWithFormat:@"CH %@",self.session.channel];
     sectionHeaderView.rssi = self.session.rssi;
     sectionHeaderView.logsTitleLabel.text = [NSString stringWithFormat:@"%@ (%ld %@)", self.session.duration, self.session.logs.count, self.session.logs.count > 1 ? @"Events" : @"Event"];
-//    sectionHeaderView.leftIcon.image = [model getSectionLeftIconinSection:section];
     sectionHeaderView.tag = section;
     sectionHeaderView.arrowImageView.highlighted = ![model hiddenRowsinSection:section];
     sectionHeaderView.buttonClick = ^(UIButton *button) {
@@ -93,43 +91,19 @@
         }
         [self performBranchClickAtSections:sections];
     };
+    @weakify(sectionHeaderView)
     sectionHeaderView.informationButtonClick = ^(UIButton *button) {
+        @strongify(sectionHeaderView)
         if([self->_openInformations containsObject:@(section)])
             [self->_openInformations removeObject:@(section)];
         else
             [self->_openInformations addObject:@(section)];
-//        [tableView reloadData];
-        
-//        [self.tableView reloadDataWithCompletion:^{
-//            [self loopUpdate];
-//        }];
-//        [self performBranchClickAtSections:@[@(section)]];
-        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//        [UIView setAnimationsEnabled:NO];
-//        [self.tableView performBatchUpdates:^{
-//            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
-//        } completion:^(BOOL finished) {
-//            [self loopUpdate];
-//        }];
-//        });
-//        [UIView setAnimationsEnabled:YES];
             BOOL openedInformation = [self->_openInformations containsObject:@(section)];
-        //    if (sectionHeaderView.openedInformation != openedInformation) {
-                sectionHeaderView.openedInformation = openedInformation;
-        //        dispatch_async(dispatch_get_main_queue(), ^{
-        //            [tableView reloadData];
-        //        });
-        //    }
+            sectionHeaderView.openedInformation = openedInformation;
     };
     
     BOOL openedInformation = [self->_openInformations containsObject:@(section)];
-//    if (sectionHeaderView.openedInformation != openedInformation) {
-        sectionHeaderView.openedInformation = openedInformation;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [tableView reloadData];
-//        });
-//    }
+    sectionHeaderView.openedInformation = openedInformation;
     
     sectionHeaderView.openedLogs = isOpened;
     sectionHeaderView.themeColor = self.session.color;
@@ -145,13 +119,6 @@
     
     if (self.session.leave.length > 0) {
         BranchFooterView* sectionFooterView = (BranchFooterView*)[tableView dequeueReusableHeaderFooterViewWithIdentifier:[BranchFooterView identifier]];
-
-    //    NSInteger endTime = self.session.dateSecond + (NSInteger)self.session.duration;
-    //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    //    [formatter setDateFormat:@"HH:mm:ss"];
-    //    NSString *endTimeString = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:endTime]];
-
-//        id<FunctionModelItem> item = [model getIteminSection:section];
         Session *session = self.session;
         
         sectionFooterView.timeLabel.text = session.displayDisTime;
@@ -160,6 +127,7 @@
 
         sectionFooterView.tag = section;
 
+        [self loopUpdate:self];
         return sectionFooterView;
     }
     
@@ -178,6 +146,7 @@
     
     sectionFooterView.themeColor = self.session.color;
     
+    [self loopUpdate:self];
     return sectionFooterView;
 }
 

@@ -10,7 +10,7 @@
 
 @implementation RoundCornerView
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame {
     if(self = [super initWithFrame:frame]){
         [self invalidateIntrinsicContentSize];
         self.cornerRadius = MIN(self.frame.size.width, self.frame.size.height) / 2;
@@ -20,7 +20,7 @@
     return self;
 }
 
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if(self = [super initWithCoder:aDecoder]){
         [self invalidateIntrinsicContentSize];
         self.cornerRadius = MIN(self.frame.size.width, self.frame.size.height) / 2;
@@ -34,11 +34,11 @@
     self.cornerRadius = MIN(self.frame.size.width, self.frame.size.height) / 2;
 }
 
--(CGFloat)cornerRadius{
+- (CGFloat)cornerRadius {
     return self.layer.cornerRadius;
 }
 
--(void)setCornerRadius:(CGFloat)cornerRadius{
+- (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
     self.layer.masksToBounds = YES;
     self.layer.rasterizationScale = YES;
@@ -46,19 +46,19 @@
     [self setNeedsLayout];
 }
 
--(CGFloat)borderWidth{
+- (CGFloat)borderWidth {
     return self.layer.borderWidth;
 }
 
--(void)setBorderWidth:(CGFloat)borderWidth{
+- (void)setBorderWidth:(CGFloat)borderWidth {
     self.layer.borderWidth = borderWidth;
 }
 
--(UIColor *)borderColor{
+- (UIColor *)borderColor {
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }
 
--(void)setBorderColor:(UIColor *)borderColor{
+- (void)setBorderColor:(UIColor *)borderColor {
     self.layer.borderColor = [borderColor CGColor];
 }
 

@@ -41,7 +41,7 @@
 
 - (instancetype)initWithTableView:(UITableView *)tableView {
     if(self = [self init]){
-        self.tableView = tableView;
+        self.tableView = (BranchTableIView *)tableView;
     }
     
     return self;
@@ -98,7 +98,7 @@
             }
 
             if(needLoopUpdate){
-                [self loopUpdate];
+                [self loopUpdate:self];
             }
 
         }];
@@ -146,19 +146,11 @@
 }
 
 - (void)loopUpdate {
-//    [UIView setAnimationsEnabled:NO];
-//    [self.tableView performBatchUpdates:nil completion:^(BOOL finished) {
-//
-//    }];
-//    [self.tableView beginUpdates];
-//    [self.tableView endUpdates];
-    
     if(self.superNode){
         [self.superNode loopUpdate:self];
     } else {
         [self loopUpdate:self];
     }
-//    [UIView setAnimationsEnabled:YES];
 }
 
 - (void)add:(id<Corp>)corp {
@@ -331,8 +323,6 @@
 - (void)loopUpdate:(id<Corp>)calledChild {
     [UIView setAnimationsEnabled:NO];
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSInteger section = [children indexOfObject:calledChild];
-
         [self.tableView performBatchUpdates:^{
 
         } completion:^(BOOL finished) {

@@ -10,8 +10,6 @@
 
 @interface ContainerBranch()<UITableViewDelegate>
 
-- (void)performBranchClickAtSections:(NSArray<NSNumber *> *)sections;
-
 @end
 
 @implementation ContainerBranch
@@ -37,10 +35,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-//    return self.session.leave.length > 0 ? UITableViewAutomaticDimension : 0;
-//    id<FunctionModelItem> item = [model getIteminSection:section];
-//    Session *session = item.session;
-//    return session.leave.length > 0 ? UITableViewAutomaticDimension : 0;
     return 0;
 }
 

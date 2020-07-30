@@ -57,10 +57,7 @@
 }
 
 - (NSString *)displayDate {
-//    NSDate* date = [NSDate dateWithTimeIntervalSince1970:self.dateSecond];
-//    NSTimeZone *timezone = [[NSTimeZone alloc] initWithName:self.timeZone];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setTimeZone:timezone];
     [formatter setDateFormat:@"yyyy/MM/dd"];
     return [formatter stringFromDate:self.date];
 }

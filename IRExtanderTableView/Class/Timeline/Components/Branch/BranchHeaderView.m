@@ -10,10 +10,8 @@
 
 @implementation BranchHeaderView
 
--(void)awakeFromNib{
+- (void)awakeFromNib {
     [super awakeFromNib];
-    
-//    [self setPreservesSuperviewLayoutMargins:YES];
 }
 
 - (IBAction)didClickHeaderView:(id)sender {

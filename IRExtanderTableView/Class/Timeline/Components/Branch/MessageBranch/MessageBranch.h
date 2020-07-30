@@ -8,12 +8,6 @@
 
 #import "Branch.h"
 
-//@protocol BranchDelegate <NSObject>
-//
-//- (void)didUpdate;
-//
-//@end
-
 @interface MessageBranch : Branch
 
 @end

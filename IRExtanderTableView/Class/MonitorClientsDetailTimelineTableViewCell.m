@@ -9,8 +9,7 @@
 #import "MonitorClientsDetailTimelineTableViewCell.h"
 #import "TimelineManager.h"
 
-@interface MonitorClientsDetailTimelineTableViewCell ()<UITableViewDelegate, UITableViewDataSource, HierarchyViewModelDelegate, BranchDelegate>{
-//    Model *model;
+@interface MonitorClientsDetailTimelineTableViewCell ()<BranchDelegate>{
     Branch *branch;
 }
 
@@ -26,8 +25,6 @@
 }
 
 - (void)setClientJourneyData:(NSDictionary *)clientJourneyData {
-//    if(_clientJourneyData == clientJourneyData)
-//        return;
     _clientJourneyData = clientJourneyData;
     
     branch = [[TimelineManager sharedInstance] branchFromClientJourneyData:_clientJourneyData];
@@ -39,16 +36,6 @@
     }];
 }
 
-- (void)willUpdate:(NSNumber *)pos {
-    [self.delegate willUpdate:pos];
-}
-
-- (void)didUpdate:(NSNumber *)pos {
-    [self layoutIfNeeded];
-    
-    [self.delegate didUpdate:pos];
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -57,6 +44,17 @@
 
 + (NSString*)identifier{
     return NSStringFromClass([self class]);
+}
+
+#pragma mark - BranchDelegate
+- (void)willUpdate:(NSNumber *)pos {
+    [self.delegate willUpdate:pos];
+}
+
+- (void)didUpdate:(NSNumber *)pos {
+    [self layoutIfNeeded];
+    
+    [self.delegate didUpdate:pos];
 }
 
 @end

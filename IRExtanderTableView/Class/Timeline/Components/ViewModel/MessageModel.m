@@ -28,9 +28,7 @@
     switch (item.type) {
         case BRANCH:
         {
-//            MessageBranchTableViewCell* cell =
-//            (MessageBranchTableViewCell*)[tableView dequeueReusableCellWithIdentifier:MessageBranchTableViewCell.identifier forIndexPath:indexPath];
-            MessageBranchTableViewCell* cell = [cells objectForKey:indexPath];
+            MessageBranchTableViewCell *cell = (MessageBranchTableViewCell *)[cells objectForKey:indexPath];
             if(!cell) {
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:MessageBranchTableViewCell.identifier owner:self options:nil];
                 cell = (MessageBranchTableViewCell *)[nib objectAtIndex:0];

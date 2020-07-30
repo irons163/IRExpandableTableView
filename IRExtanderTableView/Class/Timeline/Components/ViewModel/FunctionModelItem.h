@@ -22,4 +22,5 @@ typedef NS_ENUM(NSInteger, FunctionType){
 - (UIImage *)sectionLeftIcon;
 - (void)updateWithData:(Session *)session;
 - (Session *)session;
+
 @end

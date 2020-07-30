@@ -11,8 +11,6 @@
 
 @interface FunctionModelLeafItem : NSObject<FunctionModelItem>
 
-//@property (nonatomic, readonly) UIColor *color;
-
 - (instancetype)initWithRowCount:(NSUInteger)rowCount;
 
 @end

@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     [_tableView registerNib:[UINib nibWithNibName:MonitorClientsDetailTimelineTableViewCell.identifier bundle:nil] forCellReuseIdentifier:MonitorClientsDetailTimelineTableViewCell.identifier];
 }
@@ -68,14 +67,6 @@
 }
 
 #pragma mark - UITableViewDelegate
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.section == 1) {
-//        return 200;
-//    } else {
-//        return UITableViewAutomaticDimension;
-//    }
-//}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
@@ -95,7 +86,7 @@
 
 - (void)didUpdate:(NSNumber *)pos {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [_tableView performBatchUpdates:^{
+        [self->_tableView performBatchUpdates:^{
             
         } completion:^(BOOL finished) {
             [self showLoading:NO];

@@ -17,6 +17,9 @@
 
 @end
 
+@interface Model()<BranchTableViewCellDelegate>
+@end
+
 @implementation Model {
     
 }
@@ -84,10 +87,7 @@
     switch (item.type) {
         case BRANCH:
         {
-//            BranchTableViewCell* cell =
-//            (BranchTableViewCell*)[tableView dequeueReusableCellWithIdentifier:BranchTableViewCell.identifier forIndexPath:indexPath];
-            
-            BranchTableViewCell* cell = [cells objectForKey:indexPath];
+            BranchTableViewCell *cell = (BranchTableViewCell *)[cells objectForKey:indexPath];
             if(!cell) {
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:BranchTableViewCell.identifier owner:self options:nil];
                 cell = (BranchTableViewCell *)[nib objectAtIndex:0];
@@ -101,22 +101,7 @@
                 cell.tag = indexPath.section;
                 cell.delegate = self;
                 
-                BOOL preIsLeave = YES;
-                BOOL preApTo = YES;
-                if (indexPath.section > 0) {
-                    id<FunctionModelItem> preItem = [items objectAtIndex:indexPath.section - 1];
-                    preIsLeave = preItem.session.leave.length > 0;
-                    preApTo = [preItem.session.apTo isEqualToString:item.session.apTo];
-                }
-                
-                UIImage *_iconImage = nil;
-                
-                if (preIsLeave) {
-                    _iconImage = [UIImage imageNamed:@"ban"];
-                } else {
-                    _iconImage = [UIImage imageNamed:@"ban"];
-                }
-                
+                UIImage *_iconImage = [UIImage imageNamed:@"ban"];
                 item.session.iconImage = _iconImage;
                 
                 

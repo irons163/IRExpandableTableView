@@ -67,7 +67,7 @@
     [CATransaction begin];
     [CATransaction setCompletionBlock:^{
         NSLog(@"reload completed");
-        tableHeightConstraint.constant = self.contentSize.height;
+        self->tableHeightConstraint.constant = self.contentSize.height;
         if(completionBlock)
             completionBlock();
     }];
@@ -82,15 +82,7 @@
 
 - (void)setContentSize:(CGSize)contentSize {
     [super setContentSize:contentSize];
-//    [self.superview layoutIfNeeded];
     tableHeightConstraint.constant = self.contentSize.height;
-//    [self setNeedsUpdateConstraints];
-//    [self setNeedsLayout];
-//    [self updateConstraints];
-//    [self layoutIfNeeded];
-//    [self.superview layoutIfNeeded];
-//    [self invalidateIntrinsicContentSize];
-//    [self.bindedBranch.delegate didUpdate];
 }
 
 @end

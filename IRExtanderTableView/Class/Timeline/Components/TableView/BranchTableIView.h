@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "Branch.h"
 
 @class Branch;
 
@@ -17,4 +16,5 @@
 
 -(void)reloadDataWithCompletion:(void (^)(void))completionBlock;
 -(void)updateTableHeight;
+
 @end

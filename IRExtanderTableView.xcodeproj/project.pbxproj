@@ -135,6 +135,8 @@
 		B5B2041424528C3200C56F83 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		B5B2041624528C5C00C56F83 /* RoundCornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundCornerView.m; sourceTree = "<group>"; };
 		B5B2041724528C5D00C56F83 /* RoundCornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundCornerView.h; sourceTree = "<group>"; };
+		B5B4D0D824D26697007BDF87 /* IRMetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRMetamacros.h; sourceTree = "<group>"; };
+		B5B4D0D924D26697007BDF87 /* IRScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRScope.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,8 @@
 				B5B2041424528C3200C56F83 /* CircleView.m */,
 				B5B2041724528C5D00C56F83 /* RoundCornerView.h */,
 				B5B2041624528C5C00C56F83 /* RoundCornerView.m */,
+				B5B4D0D824D26697007BDF87 /* IRMetamacros.h */,
+				B5B4D0D924D26697007BDF87 /* IRScope.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";

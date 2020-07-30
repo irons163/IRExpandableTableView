@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LeafTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 + (NSString*)identifier;
+
 @end

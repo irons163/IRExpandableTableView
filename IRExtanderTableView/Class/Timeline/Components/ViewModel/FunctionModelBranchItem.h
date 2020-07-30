@@ -10,4 +10,5 @@
 @interface FunctionModelBranchItem : NSObject <FunctionModelItem>
 
 - (instancetype)initWithRowCount:(NSInteger)rowCount;
+
 @end
