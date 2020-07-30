@@ -1,14 +1,15 @@
 ![Build Status](https://img.shields.io/badge/build-%20passing%20-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/Platform-%20iOS%20-blue.svg)
 
-# IRExtanderTableView 
+# IRExpandableTableView
 
-- IRExtanderTableView is a powerful extanderable tableview for iOS.
+- IRExpandableTableView is a powerful expandable tableview for iOS.
 
 ## Features
-- Extander tableview with nested.
+- Expandable tableview with nested.
 - Easy to customize. Easy to management.
 - Nice stucture.
+- Has a demo project.
 
 ## Install
 ### Git
@@ -58,6 +59,9 @@ branch.delegate = self;
 }
 
 ```
+
+### Advance
+- Please see the demo project.
 
 ## Screenshots
 ![Demo](./ScreenShots/demo1.png)
